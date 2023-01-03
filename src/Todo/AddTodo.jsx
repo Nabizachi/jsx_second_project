@@ -16,9 +16,7 @@ function useInputValue(defaultValue = '') {
     }
 }
 
-
 const AddTodo = ({ onCreate }) => {
-    const [value, setValue] = useState('')
 
     const input = useInputValue('')
 
@@ -29,14 +27,8 @@ const AddTodo = ({ onCreate }) => {
         if (input.value().trim()) {
             onCreate(input.value())
             input.clear()
-            //setValue('')
         }
     }
-
-    // const onChangeHandler = (event) => {
-    //     setValue(event.target.value)
-    // }
-
 
     return (
         <form style={{ marginBottom: '1rem' }} onSubmit={submitHandler}>
