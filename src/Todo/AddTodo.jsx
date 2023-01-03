@@ -14,9 +14,18 @@ const AddTodo = ({ onCreate }) => {
             console.log(event.target)
         }
     }
+
+    const onChangeTest = (event) => {
+        console.log('===========================================')
+        console.log(event)
+        console.log('===========================================')
+        setValue(event.target.value)
+    }
+
+
     return (
         <form style={{ marginBottom: '1rem' }} onSubmit={submitHandler}>
-            <input style={{ marginRight: '1rem' }} value={value} onChange={event => setValue(event.target.value)} />
+            <input style={{ marginRight: '1rem' }} value={value} onChange={onChangeTest} />
             <button className='btn' type='submit'> Add Todo</button>
         </form>
     )
