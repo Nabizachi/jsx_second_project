@@ -16,9 +16,6 @@ const AddTodo = ({ onCreate }) => {
     }
 
     const onChangeHandler = (event) => {
-        console.log('===========================================')
-        console.log(event)
-        console.log('===========================================')
         setValue(event.target.value)
     }
 

@@ -40,13 +40,13 @@ function App() {
 
     <Context.Provider value={{ removeTodo }}>
       <div className='wrapper'>
-        <h1>React Tutorial</h1>
+        <h1>Список дел</h1>
         <AddTodo onCreate={addTodo} />
         {todos.length
           ?
           <TodoList todos={todos} onToggle={toggleTodo} />
           :
-          <p>No TODOS</p>
+          <h2>Дела закончились</h2>
         }
       </div>
     </Context.Provider>
