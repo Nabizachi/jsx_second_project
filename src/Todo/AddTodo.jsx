@@ -15,7 +15,7 @@ const AddTodo = ({ onCreate }) => {
         }
     }
 
-    const onChangeTest = (event) => {
+    const onChangeHandler = (event) => {
         console.log('===========================================')
         console.log(event)
         console.log('===========================================')
@@ -25,7 +25,7 @@ const AddTodo = ({ onCreate }) => {
 
     return (
         <form style={{ marginBottom: '1rem' }} onSubmit={submitHandler}>
-            <input style={{ marginRight: '1rem' }} value={value} onChange={onChangeTest} />
+            <input style={{ marginRight: '1rem' }} value={value} onChange={onChangeHandler} />
             <button className='btn' type='submit'> Add Todo</button>
         </form>
     )
